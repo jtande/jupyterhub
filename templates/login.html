@@ -68,10 +68,13 @@
 </form>
 {% endif %}
 </div>
-{{ super() }}
-<p>Welcome to UNCG JupyterHub for Data Science</p>
 {% endblock login %}
 
+{% endblock %}
+
+{% block message %}
+{{ super() }}
+<p>Welcome to UNCG JupyterHub for Data Science</p>
 {% endblock %}
 
 {% block script %}

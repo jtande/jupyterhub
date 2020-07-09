@@ -1,6 +1,6 @@
 {% extends "templates/login.html" %}
 {% if announcement_login %}
-  {% set announcement = "Welcome to the UNCG JupyterHub for Data Science" %}
+  {% set announcement = announcement_message %}
 {% endif %}
 
 {% block login_widget %}
@@ -19,6 +19,7 @@
   </a>
 </div>
 {% else %}
+
 <form action="{{login_url}}?next={{next}}" method="post" role="form">
   <div class="auth-form-header">
     Sign in
@@ -67,6 +68,8 @@
 </form>
 {% endif %}
 </div>
+{{ super() }}
+<p>Welcome to UNCG JupyterHub for Data Science</p>
 {% endblock login %}
 
 {% endblock %}

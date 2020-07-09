@@ -1,6 +1,6 @@
-{% extends "templates/page.html" %}
+{% extends "login.html" %}
 {% if announcement_login %}
-  {% set announcement = announcement_login %}
+  {% set announcement = "Welcome to the UNCG JupyterHub for Data Science" %}
 {% endif %}
 
 {% block login_widget %}
@@ -10,8 +10,6 @@
 
 {% block login %}
 <div id="login-main" class="container">
-{{ super() }}
-<p>Welcome to UNC Greensboro JupyterHub for Data Science</p>
 {% if custom_html %}
 {{ custom_html | safe }}
 {% elif login_service %}

@@ -1,6 +1,6 @@
-{% extends "templates/login.html" %}
+{% extends "page.html" %}
 {% if announcement_login %}
-  {% set announcement = announcement_message %}
+  {% set announcement = announcement_login %}
 {% endif %}
 
 {% block login_widget %}
@@ -13,13 +13,78 @@
 {% if custom_html %}
 {{ custom_html | safe }}
 {% elif login_service %}
+
 <div class="service-login">
-  <a role="button" class='btn btn-jupyter btn-lg' href='{{authenticator_login_url}}'>
+  <a class='btn btn-jupyter btn-lg' href='{{login_url}}'>
     Sign in with {{login_service}}
   </a>
 </div>
 {% else %}
 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #F37524;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Jupyter @ Bryn Mawr College</h1>
+</div>
+
+<div class="row">
+
+<div class="col-3"> <!-- login cell -->
 <form action="{{login_url}}?next={{next}}" method="post" role="form">
   <div class="auth-form-header">
     Sign in
@@ -39,7 +104,7 @@
     <label for="username_input">Username:</label>
     <input
       id="username_input"
-      type="text"
+      type="username"
       autocapitalize="off"
       autocorrect="off"
       class="form-control"
@@ -66,19 +131,83 @@
     />
   </div>
 </form>
+</div> <!-- cell -->
+
+<div class="col-9">
+  <H2>Welcome to the UNCG JupyterHub!</H2>
+
+  <p>To login into JupyterHub, enter your UNCG username and password.
+    <i>This is the same as your school ID/password</i>. If you would
+    need assistance, please visit <a href="https://uncg.service-now.com/support">6-TECH Online</a> to open a request.</p>
+
+  <H3>Useful Links</H3>
+
+  <ul>
+    <li><a href="/services/public/dblank/Jupyter%20Notebook%20Users%20Manual.ipynb">Jupyter Notebook Users Manual</a></li>
+  </ul>
+
+  <h3>News</h3>
+
+  <ul>
+    <li>New JupyterHub Running on Kubernete Cluster configured and operational!</li>
+  </ul>
+  
+  <H3>Courses that have used JupyterHub</H3>
+  
+  <ul>
+    <li><b>2020-2021</b></li>
+    <ul>
+      <!--
+      <li><a href="/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Fall/Syllabus.ipynb">CS110: Introduction to Computing, Fall 2017</a></li>
+      <li><a href="/services/public/dblank/CS240%20Computer%20Organization/2017-Fall/Syllabus.ipynb">CS240: Principles of Computer Organization, Fall 2017</a></li>
+      -->
+      </ul>
+    <li><b>2019-2020</b></li>
+    <ul>
+      <!--
+      <li><a href="/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Syllabus.ipynb">CS110: Introduction to Computing, Spring 2017</a></li>
+      <li><a href="/services/public/dblank/CS206%20Data%20Structures/2017-Spring/Syllabus.ipynb">CS206: Data Structures, Spring 2017</a></li>
+      <li><a href="/services/public/dblank/CS245%20Programming%20Languages/2016-Fall/Syllabus.ipynb">CS245: Principles of Programming Languages, Fall 2016</a></li>
+      <li><a href="/services/public/dblank/CS371%20Cognitive%20Science/2016-Fall/Syllabus.ipynb">CS371: Introduction to Cognitive Science, Fall 2016</a>
+	-->
+      </ul>
+  </ul>
+
+  <H3>Administration</H3>
+  <ul>
+    <li><p>To use JupyterHub, in your course, please visit
+	<a href="https://uncg.service-now.com/support">6-TECH Online</a> to open a request.
+      This will ensure a quality of service</p>
+    </li>
+  </ul>
+
+<p>Funding, for equipment and development, provided by:</p>
+
+<table>
+<tr>
+  <td bgcolor="#0000FF">
+    <a href="https://its.uncg.edu/"><img src="https://images.app.goo.gl/NDd8TirmHDhvXDtQ6" width="200"/></a>
+  </td>
+  <!--
+  <td>
+    <a href="https://www.aacu.org/tides"><img src="http://athena.brynmawr.edu/images/helmsley-logo.jpg" height="100"/></a>
+  </td>
+  -->
+</tr>
+</table>
+  
+</div>
+
+</div> <!-- row -->
 {% endif %}
 </div>
 {% endblock login %}
 
 {% endblock %}
 
-{% block message %}
-{{ super() }}
-<p>Welcome to UNCG JupyterHub for Data Science</p>
-{% endblock %}
-
 {% block script %}
-{{ super() }}
+{{super()}}
+
 <script>
 if (window.location.protocol === "http:") {
   // unhide http warning

@@ -88,9 +88,88 @@
 	      Sign in with {{login_service}}
 	    </a>
 	  </div>
-	  {% else %}
-	  <!-- modification started here -->
+	</div> <!-- cell -->
+	<div class="col-9">
+	  <H2>Welcome to the UNCG JupyterHub!</H2>
 	  
+	  <p> Login to JupyterHub using your iSpartan ID. If you would
+	    need assistance, please visit <a href="https://uncg.service-now.com/support">6-TECH Online</a> to open a request.</p>
+	  
+	  <H3>Useful Links</H3>
+	  
+	  <ul>
+	    <li><a href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab users manual</a></li>
+	    <li><a href="https://jupyter.org/documentation">Learn more about the Jupyter project</a></li>
+	  </ul>
+	  
+	  <h3>News</h3>
+	  
+	  <ul>
+	    <li>New JupyterHub running on Kubernete cluster configured and operational!</li>
+	  </ul>
+	  
+	  <H3>Courses that have used JupyterHub</H3>
+	  
+	  <ul>
+	    <li><b>2020-2021</b></li>
+	    <ul>
+	      <!--
+		  <li><a href="/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Fall/Syllabus.ipynb">CS110: Introduction to Computing, Fall 2017</a></li>
+	      <li><a href="/services/public/dblank/CS240%20Computer%20Organization/2017-Fall/Syllabus.ipynb">CS240: Principles of Computer Organization, Fall 2017</a></li>
+	      -->
+	    </ul>
+	    <li><b>2019-2020</b></li>
+	    <ul>
+	      <!--
+		  <li><a href="/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Syllabus.ipynb">CS110: Introduction to Computing, Spring 2017</a></li>
+	      <li><a href="/services/public/dblank/CS206%20Data%20Structures/2017-Spring/Syllabus.ipynb">CS206: Data Structures, Spring 2017</a></li>
+	      <li><a href="/services/public/dblank/CS245%20Programming%20Languages/2016-Fall/Syllabus.ipynb">CS245: Principles of Programming Languages, Fall 2016</a></li>
+	      <li><a href="/services/public/dblank/CS371%20Cognitive%20Science/2016-Fall/Syllabus.ipynb">CS371: Introduction to Cognitive Science, Fall 2016</a>
+		-->
+	    </ul>
+	  </ul>
+	  
+	  <H3>Administration</H3>
+	  <ul>
+	    <li><p>To use JupyterHub, in your course, please visit
+		<a href="https://uncg.service-now.com/support">6-TECH Online</a> to open a request.
+	      </p>
+	    </li>
+	    <li><p>UNCG JupyterHub is a <a href="https://cci-lab.uncg.edu/about-the-cci-lab/">CCI Lab project.</a>
+	      </p>
+	    </li>
+	    <li><p>Are you a student interested in working on the project? Make a request at<a href="https://uncg.service-now.com/support"> 6-TECH Online</a>  
+	      </p>
+	    </li>
+	  </ul>
+	  
+	  <p>Funding, for equipment and development, provided by:</p>
+	  
+	  <table>
+	    <tr>
+	      <!-- <td bgcolor="#0000FF"> -->
+	      <td bgcolor="#000033">
+		<a href="https://imgur.com/K8RsDH9"><img src="https://i.imgur.com/K8RsDH9.jpg" title="source: imgur.com" width="200" /></a>
+		<!-- <a href="https://its.uncg.edu/"><img src="uncg_its_logo.jpg" width="200"/></a> -->
+	      </td>
+	      <!--
+		  <td>
+		    <a href="https://www.aacu.org/tides"><img src="http://athena.brynmawr.edu/images/helmsley-logo.jpg" height="100"/></a>
+		  </td>
+		  -->
+	    </tr>
+	  </table>
+	  
+	</div> <!-- second column -->
+      </div> <!-- login-main -->
+    </div> <!-- row -->
+    {% else %}
+    <!-- modification started here -->
+    <div class="row">
+      
+      <div class="col-3"> <!-- login cell -->
+	
+	<div id="login-main" class="container">
 	  <!-- end modification here -->
   
 	  <form action="{{login_url}}?next={{next}}" method="post" role="form">

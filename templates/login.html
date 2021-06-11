@@ -70,6 +70,31 @@ html {
     background-color: #FFDF00;
     <!--background-color: #0099cc; -->
 }
+/* Red border */
+hr.new1 {
+  border-top: 1px solid red;
+}
+
+/* Dashed red border */
+hr.new2 {
+  border-top: 1px dashed red;
+}
+
+/* Dotted red border */
+hr.new3 {
+  border-top: 1px dotted red;
+}
+
+/* Thick red border */
+hr.new4 {
+  border: 1px solid red;
+}
+
+/* Large rounded green border */
+hr.new5 {
+  border: 10px solid green;
+  border-radius: 5px;
+}
 </style>
 </head>
 <body>
@@ -152,33 +177,46 @@ html {
     <li>New JupyterHub running on Kubernete cluster configured for teaching and research!</li>
   </ul>
   
-
-  <H3>Statistical Consulting Center's JupyterHub</H3>
-  
-  <ul>
-    <li><b>Summer 2021 Workshops:</b></li>
-<!--  <H3><p style="color:yellow;">S</p>tatistical <p style="color:yellow;">C</p>onsulting <p style="color:yellow;">C</p>enter's JupyterHub</H3> -->
-    <ul>
-      <!-- <li>ISM210-01: Principles of Business Analytics 3</li> -->
-      <!-- <li>ISM646-03: Visualizing Data to Design Strategy 3</li> -->
-      <!--
-      <li><a href="/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Fall/Syllabus.ipynb">CS110: Introduction to Computing, Fall 2017</a></li>
-      <li><a href="/services/public/dblank/CS240%20Computer%20Organization/2017-Fall/Syllabus.ipynb">CS240: Principles of Computer Organization, Fall 2017</a></li>
-      -->
-    </ul>
-    <!--
-    <li><b>2019-2020</b></li>
-    <ul>
-      <!--
-      <li><a href="/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Syllabus.ipynb">CS110: Introduction to Computing, Spring 2017</a></li>
-      <li><a href="/services/public/dblank/CS206%20Data%20Structures/2017-Spring/Syllabus.ipynb">CS206: Data Structures, Spring 2017</a></li>
-      <li><a href="/services/public/dblank/CS245%20Programming%20Languages/2016-Fall/Syllabus.ipynb">CS245: Principles of Programming Languages, Fall 2016</a></li>
-      <li><a href="/services/public/dblank/CS371%20Cognitive%20Science/2016-Fall/Syllabus.ipynb">CS371: Introduction to Cognitive Science, Fall 2016</a>
-	---
-    </ul>
-    -->
-  </ul>
-
+  <H3>FAQs</H3>
+  <hr class="new1">
+  <H3>What is a Jupyter Notebook? </H3>
+  <p>
+    Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code,
+    equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation,
+    statistical modeling, data visualization, machine learning, and much more.
+  </p>
+  <hr class="new1">
+  <H3>What is a JupyterHub? </H3>
+  <p>
+    JupyterHub brings the power of notebooks to groups of users. It gives users access to computational environments and
+    resources without burdening the users with installation and maintenance tasks. Users - including students, researchers,
+    and data scientists - can get their work done in their own workspaces on shared resources which can be managed efficiently
+    by system administrators. 
+  </p>
+  <hr class="new1">
+  <H3>Who can use this service? </H3>
+  <p>
+    This JupyterHub service is open to UNCG instructors and students; as this is an open service, students should
+    ensure they are backing up their notebooks regularly if they are using this service for course activities. 
+  </p>
+  <hr class="new1">
+  <H3>How do I distribute course content to students? </H3>
+  <p>
+    We recommend using <a href="https://jupyterhub.github.io/nbgitpuller/">nbgitpuller</a> to distribute content to students.
+    You can construct a <a href="https://jupyterhub.github.io/nbgitpuller/link">nbgitpuller</a> link, and
+    send it to your students. When they click it, the course content will be pulled into their home directories,
+    and the appropriate file will be opened. 
+  </p>
+  <hr class="new1">
+  <H3>Can I install my own packages?</H3>
+  <p>
+    Yes, you can! In a Jupyter Notebook, you can use !pip install package-name or !conda install package-name to install
+    a Python package. With R, you can use install.packages(). To prevent individual user environments diverging from each
+    other too much, your user installed packages only last the length of your server. So we recommend putting those package
+    installation lines in the beginning of the notebook / file that you are using, so it can be run each time as necessary. 
+  </p>
+  <hr class="new1">
+ 
   <H3>Administration</H3>
   <ul>
     <li><p>To use JupyterHub, in your course, please visit
@@ -268,6 +306,31 @@ html {
 .menu li:hover {
     background-color: #FFDF00;
     <!--background-color: #0099cc; -->
+}
+/* Red border */
+hr.new1 {
+  border-top: 1px solid red;
+}
+
+/* Dashed red border */
+hr.new2 {
+  border-top: 1px dashed red;
+}
+
+/* Dotted red border */
+hr.new3 {
+  border-top: 1px dotted red;
+}
+
+/* Thick red border */
+hr.new4 {
+  border: 1px solid red;
+}
+
+/* Large rounded green border */
+hr.new5 {
+  border: 10px solid green;
+  border-radius: 5px;
 }
 </style>
 </head>
@@ -399,43 +462,51 @@ html {
 
   <ul>
     <li><a href="https://jupyterlab.readthedocs.io/en/latest/">JupyterLab users manual</a></li>
-     <li><a href="https://jupyter.org/documentation">Learn more about the Jupyter project</a></li>
+    <li><a href="https://jupyter.org/documentation">Learn more about the Jupyter project</a></li>
+     <li><a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks">A gallery of interesting Jupyter Notebooks</a></li>
   </ul>
 
   <h3>News</h3>
-
-  <ul>
-    <li>New JupyterHub running on Kubernete cluster configured for teaching and research!</li>
-  </ul>
-  
-
-  <H3>Statistical Consulting Center's JupyterHub</H3>
-  
-  <ul>
-    <li><b>Summer 2021 Workshop</b></li>
- <!-- <H3><p style="color:yellow;">S</p>tatistical <p style="color:yellow;">C</p>onsulting <p style="color:yellow;">C</p>enter's JupyterHub</H3> -->
-    <ul>
-      <!-- <li>ISM210-01: Principles of Business Analytics 3</li> -->
-      <!-- <li>ISM646-03: Visualizing Data to Design Strategy 3</li> -->
-    
-      <!--
-      <li><a href="/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Fall/Syllabus.ipynb">CS110: Introduction to Computing, Fall 2017</a></li>
-      <li><a href="/services/public/dblank/CS240%20Computer%20Organization/2017-Fall/Syllabus.ipynb">CS240: Principles of Computer Organization, Fall 2017</a></li>
-      -->
-    </ul>
-    <!--
-    <li><b>2019-2020</b></li>
-    <ul>
-      --
-      <li><a href="/services/public/dblank/CS110%20Intro%20to%20Computing/2017-Spring/Syllabus.ipynb">CS110: Introduction to Computing, Spring 2017</a></li>
-      <li><a href="/services/public/dblank/CS206%20Data%20Structures/2017-Spring/Syllabus.ipynb">CS206: Data Structures, Spring 2017</a></li>
-      <li><a href="/services/public/dblank/CS245%20Programming%20Languages/2016-Fall/Syllabus.ipynb">CS245: Principles of Programming Languages, Fall 2016</a></li>
-      <li><a href="/services/public/dblank/CS371%20Cognitive%20Science/2016-Fall/Syllabus.ipynb">CS371: Introduction to Cognitive Science, Fall 2016</a>
-	--
-    </ul>
-    -->
-  </ul>
-
+   <H3>FAQs</H3>
+  <hr class="new1">
+  <H3>What is a Jupyter Notebook? </H3>
+  <p>
+    Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code,
+    equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation,
+    statistical modeling, data visualization, machine learning, and much more.
+  </p>
+  <hr class="new1">
+  <H3>What is a JupyterHub? </H3>
+  <p>
+    JupyterHub brings the power of notebooks to groups of users. It gives users access to computational environments and
+    resources without burdening the users with installation and maintenance tasks. Users - including students, researchers,
+    and data scientists - can get their work done in their own workspaces on shared resources which can be managed efficiently
+    by system administrators. 
+  </p>
+  <hr class="new1">
+  <H3>Who can use this service? </H3>
+  <p>
+    This JupyterHub service is open to UNCG instructors and students; as this is an open service, students should
+    ensure they are backing up their notebooks regularly if they are using this service for course activities. 
+  </p>
+  <hr class="new1">
+  <H3>How do I distribute course content to students? </H3>
+  <p>
+    We recommend using <a href="https://jupyterhub.github.io/nbgitpuller/">nbgitpuller</a> to distribute content to students.
+    You can construct a <a href="https://jupyterhub.github.io/nbgitpuller/link">nbgitpuller</a> link, and
+    send it to your students. When they click it, the course content will be pulled into their home directories,
+    and the appropriate file will be opened. 
+  </p>
+  <hr class="new1">
+  <H3>Can I install my own packages?</H3>
+  <p>
+    Yes, you can! In a Jupyter Notebook, you can use !pip install package-name or !conda install package-name to install
+    a Python package. With R, you can use install.packages(). To prevent individual user environments diverging from each
+    other too much, your user installed packages only last the length of your server. So we recommend putting those package
+    installation lines in the beginning of the notebook / file that you are using, so it can be run each time as necessary. 
+  </p>
+  <hr class="new1">
+ 
   <H3>Administration</H3>
   <ul>
     <li><p>To use JupyterHub, in your course, please visit
